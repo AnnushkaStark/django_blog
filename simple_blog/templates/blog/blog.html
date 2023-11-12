@@ -27,7 +27,7 @@
 					{% for post in post_list %}
 					<div class="item">
 						<div class="image left">
-							<a href="#"><img src="css/images/project01.jpg" alt="" /></a>
+							<p><img src="{{ post.image.url }}" alt="изображение" width="200px" height="150px"/></p>
 						</div>
 						<div class="text left">
 							<h4>{{ post.title }}</h4>
