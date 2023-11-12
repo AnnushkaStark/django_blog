@@ -23,23 +23,16 @@
 			<div id="content" class="left">
 				
 				<div class="projects">
-					<h3>Записи</h3>
-					{% for post in post_list %}
+					<h3>{{ post.title }}</h3>
+                    <p style="text-align: center;"><img src="{{ post.image.url }}" alt="изображение" width="50%" height="350px"/></p>
 					<div class="item">
-						<div class="image left">
-							<p><img src="{{ post.image.url }}" alt="изображение" width="200px" height="150px"/></p>
-						</div>
 						<div class="text left">
-							<h4><a href="{{post.id}}">{{post.title }}</a></h4>
 							<p>{{ post.description }}</p>
 							<p>Автор: {{post.author}}   {{ post.date}} </p>
 						</div>
 						<div class="cl">&nbsp;</div>
-						<br>
-						{% endfor %}
-						
+                    
 					</div>
-				
 					
 				</div>
 			</div>
