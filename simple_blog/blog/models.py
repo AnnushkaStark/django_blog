@@ -12,11 +12,16 @@ class Post(models.Model):
     def __str__(self):
         return f'{self.title} {self.author}' 
 
-    #class Meta:
-        #verbous_name = 'Запись'
-        #verbous_name_plural = 'Записи'
-
+class Comment(models.Model):
+    '''Сохранение комментариев пользовтелей'''
+    email = models.EmailField()
+    name = models.CharField('Имя пользователя', max_length=50)
+    text_comment = models.TextField('Текст комментария', max_length=2000)
+    date = models.DateTimeField(auto_now_add=True)
+    post = models.ForeignKey(Post,on_delete=models.CASCADE)
     
+    def __str__(self):
+        return f'{self.name} {self.text_comment} {self.post} {self.date}'
     
 
     
