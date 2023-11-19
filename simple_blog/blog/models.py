@@ -24,4 +24,11 @@ class Comment(models.Model):
         return f'{self.name} {self.text_comment} {self.post} {self.date}'
     
 
-    
+class Like(models.Model):
+    '''Модель для хранения лайков пользователей'''
+    ip = models.CharField(max_length=100) # т.к на сайте не реализована регистрация и авторизация сохраняем ip адрес чтобы с одного ip можно было поставить только 1 лайк
+    article = models.ForeignKey(Post,on_delete=models.CASCADE)
+     
+
+    def __str__(self):
+        return f'{self.ip} {self.article}'

@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.views.generic.base import View
-from .models import Post
+from .models import Post, Like
 from .form import CommentsForm
 # Create your views here.
 
@@ -28,4 +28,35 @@ class AddComments(View):
             return redirect(f'/{pk}')
 
         
+def get_client_ip(request):
+    '''Функция для полуения ip адреса пользователя'''
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
 
+
+class AddLike(View):
+    '''Проставление лайков под постами'''
+    def get(self,request, pk):
+        ip_client = get_client_ip(request)
+    
+        try:
+            Like.objects.get_or_create(ip = ip_client, article_id = pk)
+            return redirect(f'/{pk}')
+        except Exception:
+        
+            return redirect(f'/{pk}')
+        
+class DelLike(View):
+    '''Удаление лайка'''
+    def get(self,request, pk):
+        ip_client = get_client_ip(request)
+        try:
+            like= Like.objects.get(ip= ip_client, article_id = pk)
+            like.delete()
+            return redirect(f'/{pk}')
+        except Exception:
+            return redirect(f'/{pk}')
