@@ -62,7 +62,10 @@ textarea { overflow:auto; }
 .advertisement .ad { margin: 0 0 18px 0; }
 
 
-
 #footer { font-family: Arial, sans-serif; font-size: 11px; line-height: 14px; color: #7f7f7f; padding: 18px 27px 20px 38px; }
 #footer a{ color: #7f7f7f; }
+
+.form_comments { font-size: 18px; }
+.form_comments label { margin: 10px 10px; }
+.form_comments input { border-radius: 15px; padding: 15px; height: 50px; width: 250px; }
 

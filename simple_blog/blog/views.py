@@ -20,12 +20,18 @@ class PostDetail(View):
 class AddComments(View):
     '''Добавление комментариев'''
     def post(self, request, pk):
-        form = CommentsForm(request.POST)
-        if form.is_valid():
-            form = form.save(commit=False)
-            form.post_id = pk
-            form.save()
+        try:
+            form = CommentsForm(request.POST)
+            if form.is_valid():
+                form = form.save(commit=False)
+                form.post_id = pk
+                form.save()
+                return redirect(f'/{pk}')
+            
             return redirect(f'/{pk}')
+        except ValueError:
+            return redirect(f'/{pk}')
+            
 
         
 def get_client_ip(request):
