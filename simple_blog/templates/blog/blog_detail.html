@@ -71,7 +71,14 @@
 		</form>
 		</div>
 	</div>
-	
+	<div> {% for comment in post.comment_set.all %}
+		<div>
+			<h4>{{ comment.name }}</h4>
+			<p>{{ comment.text_comment}}</p>
+			<p>{{comment.date}}</p>
+		</div>
+	{% endfor %}
+</div>
 	<div id="footer">
 		<p class="copy right">Copyright &copy;  2022 </p>
 	</div>
