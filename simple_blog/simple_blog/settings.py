@@ -30,7 +30,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', "AnnushkaStark.pythonanyware.com"]
 
-INTERNAL_IPS = ['127.0.0.1']
+INTERNAL_IPS = ['127.0.0.1','140.82.114.4']
 
 
 # Application definition
