@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', "AnnushkaStark.pythonanyware.com"]
+ALLOWED_HOSTS = ['127.0.0.1', "AnnushkaStark.pythonanywhere.com"]
 
 INTERNAL_IPS = ['127.0.0.1','140.82.114.4']
 
@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'AnnushkaStark$default',
         'USER': 'AnnushkaStark',
         'PASSWORD': os.getenv("MYSQL-PASSWORD"),
-        'HOST': 'AnnushkaStark.mysql.pythonanyware-services.com',
+        'HOST': 'AnnushkaStark.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4'; SET sql_mode = 'STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
@@ -132,7 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR/ 'static/'
+STATIC_ROOT = BASE_DIR / 'static/'
 STATIC_DIR = os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS = [STATIC_DIR]
 
