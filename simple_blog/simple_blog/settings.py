@@ -89,7 +89,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mypynotes$default',
-        'USER': ['mypynotes', 'mypynotes "@" 10.0.5.99'],
+        'USER': 'mypynotes',
         'PASSWORD': os.getenv("MYSQL-PASSWORD"),
         'HOST': 'mypynotes.mysql.pythonanywhere-services.com',
         'OPTIONS': {
