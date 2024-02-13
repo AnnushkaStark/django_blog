@@ -32,7 +32,7 @@ CSRF_COOKIE_SECURE = True
 
 
 
-ALLOWED_HOSTS = ['127.0.0.1', "mypynotes.pythonanywhere.com"]
+ALLOWED_HOSTS = ['127.0.0.1', "simplenews.pythonanywhere.com"]
 
 INTERNAL_IPS = ['127.0.0.1']
 
@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'simple_blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mypynotes$default',
-        'USER': 'mypynotes',
+        'NAME': 'simplenews$default',
+        'USER': 'simplenews',
         'PASSWORD': os.getenv("MYSQL_PASSWORD"),
-        'HOST': 'mypynotes.mysql.pythonanywhere-services.com',
+        'HOST': 'simplenews.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4'; SET sql_mode = 'STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
