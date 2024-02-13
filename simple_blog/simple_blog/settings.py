@@ -26,15 +26,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
 
 
-ALLOWED_HOSTS = ['127.0.0.1', "simplenews.pythonanywhere.com"]
+ALLOWED_HOSTS = ['127.0.0.1', "simplenews.pythonanywhere.com", '10.0.4.165']
 
-INTERNAL_IPS = ['127.0.0.1']
+INTERNAL_IPS = ['127.0.0.1','10.0.4.165']
 
 
 # Application definition
