@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'simple_blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gsimplenews$default',
+        'NAME': 'simplenews$default',
         'USER': 'simplenews',
         'PASSWORD': os.getenv("MYSQL_PASSWORD"),
         'HOST': 'simplenews.mysql.pythonanywhere-services.com',
