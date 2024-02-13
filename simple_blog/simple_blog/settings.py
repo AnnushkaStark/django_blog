@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #SECRET_KEY = 'django-insecure--7+u#p*bouu5l#msa+yxafd1%-i^km+628s8hagivyn*-_rl(u'
 
 
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = "06d7cba53720078929f70a55b0eeba94447fe3032fdab1c04464efe4094acc9a"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 SESSION_COOKIE_SECURE = True
@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'simplenews$default',
         'USER': 'simplenews',
-        'PASSWORD': os.getenv("MYSQL_PASSWORD"),
+        'PASSWORD': "dbpassword",
         'HOST': 'simplenews.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4'; SET sql_mode = 'STRICT_TRANS_TABLES'",
