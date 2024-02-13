@@ -13,9 +13,10 @@
 		<div id="navigation">
 			<ul>
 			    <li><a href="/" class="active">Главная</a></li>
-				
+				{% if user.issuperuser %}
 			    <li><a href="/admin">Админ панель</a></li>
-				
+				{% else %}
+				{% enif %}
 			    
 			</ul>
 		</div>
