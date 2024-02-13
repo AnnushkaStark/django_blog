@@ -90,7 +90,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mypynotes$default',
         'USER': 'mypynotes',
-        'PASSWORD': os.getenv("MYSQL-PASSWORD"),
+        'PASSWORD': os.getenv("MYSQL_PASSWORD"),
         'HOST': 'mypynotes.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4'; SET sql_mode = 'STRICT_TRANS_TABLES'",
