@@ -28,9 +28,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', "AnnushkaStark.pythonanywhere.com"]
+ALLOWED_HOSTS = ['127.0.0.1', "mypynotes.pythonanywhere.com"]
 
-INTERNAL_IPS = ['127.0.0.1','140.82.114.4']
+INTERNAL_IPS = ['127.0.0.1']
 
 
 # Application definition
@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'AnnushkaStark$default',
         'USER': 'AnnushkaStark',
         'PASSWORD': os.getenv("MYSQL-PASSWORD"),
-        'HOST': 'AnnushkaStark.mysql.pythonanywhere-services.com',
+        'HOST': 'mypynotes.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4'; SET sql_mode = 'STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
