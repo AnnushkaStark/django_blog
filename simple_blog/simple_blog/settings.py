@@ -88,8 +88,8 @@ WSGI_APPLICATION = 'simple_blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'AnnushkaStark$default',
-        'USER': 'AnnushkaStark',
+        'NAME': 'mypynotes$default',
+        'USER': 'mypynotes',
         'PASSWORD': os.getenv("MYSQL-PASSWORD"),
         'HOST': 'mypynotes.mysql.pythonanywhere-services.com',
         'OPTIONS': {
