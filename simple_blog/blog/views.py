@@ -13,7 +13,7 @@ class PostView(ListView):
     """
 
     def get(self, request):
-        posts = Post.objects.all()
+        posts = Post.objects.all().order_by('-id')
         return render(request, "blog/blog.html", {"post_list": posts})
 
 
