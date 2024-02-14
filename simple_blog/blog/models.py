@@ -8,7 +8,7 @@ class Post(models.Model):
     title = models.CharField("Заголовок записи", max_length=100)
     description = models.TextField("Текст записи")
     author = models.CharField("Автор статьи", max_length=100)
-    date = models.DateField("Дата")
+    date = models.DateTimeField(auto_now_add=True)
     image = models.ImageField("Изображение", upload_to="image/%Y")
 
     def __str__(self):
